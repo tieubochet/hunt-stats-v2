@@ -189,12 +189,10 @@ const frameHandler = frames(async (ctx) => {
 
   const cache = new Date().getTime();
 
-  const shareUrl = `https://warpcast.com/~/compose?text=${shareText}&embeds[]=${encodeURIComponent(
-    appURL() +
-      (fid
-        ? `?userfid=${fid}&c=${cache}`
-        : `?c=${cache}`)
-  )}`;
+  // Change the url here
+  const shareUrl = `https://warpcast.com/~/compose?text=${shareText}&embeds[]=https://hunt-stats-v2.vercel.app/frames${
+    fid ? `?userfid=${fid}` : ""
+  }`;
 
   const buttons = [];
 
