@@ -7,7 +7,7 @@ if (!apiKey) {
 }
 init(apiKey);
 
-console.log("Airstack API initialized for Moxie earnings");
+//console.log("Airstack API initialized for Moxie earnings");
 
 const moxieQuery = `
 query MyQuery($entityId: String!, $timeframe: FarcasterMoxieEarningStatsTimeframe!) {
@@ -22,7 +22,7 @@ query MyQuery($entityId: String!, $timeframe: FarcasterMoxieEarningStatsTimefram
 `;
 
 export async function GET(req: NextRequest) {
-  console.log(`Moxie earnings API route called at ${new Date().toISOString()}`);
+  //console.log(`Moxie earnings API route called at ${new Date().toISOString()}`);
   console.log(`Full URL: ${req.url}`);
 
   const entityId = req.nextUrl.searchParams.get("entityId");
