@@ -222,7 +222,7 @@ const frameHandler = frames(async (ctx) => {
     imageOptions: {
       aspectRatio:"1:1",
     },
-    title: "Hunt Stats Frame v1",
+    title: "Hunt Stats Frame v2",
     description: "Check your HUNT STATS by @tieubochet.eth",
   };
 });
