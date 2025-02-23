@@ -160,7 +160,7 @@ export async function GET(req: NextRequest) {
         lifetimeEarnings,
     });
   } catch (error) {
-    console.error("Unexpected error:", error);
+    //console.error("Unexpected error:", error);
     return NextResponse.json(
       { error: "An unexpected error occurred" },
       { status: 500 }
