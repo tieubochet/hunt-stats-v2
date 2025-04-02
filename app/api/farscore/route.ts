@@ -24,11 +24,11 @@ query GetUserSocialCapital($userId: String!) {
 `;
 
 export async function GET(req: NextRequest) {
-  //console.log(`API route called at ${new Date().toISOString()}`);
-  //console.log(`Full URL: ${req.url}`);
+  console.log(`API route called at ${new Date().toISOString()}`);
+  console.log(`Full URL: ${req.url}`);
 
   const userId = req.nextUrl.searchParams.get("userId");
-  //console.log(`Requested userId: ${userId}`);
+  console.log(`Requested userId: ${userId}`);
 
   if (!userId) {
     console.log("Error: userId parameter is missing");
