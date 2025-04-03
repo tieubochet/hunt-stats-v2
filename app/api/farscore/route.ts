@@ -39,22 +39,22 @@ export async function GET(req: NextRequest) {
   }
 
   try {
-    //console.log(`Fetching data from Airstack for userId: ${userId}`);
+    console.log(`Fetching data from Airstack for userId: ${userId}`);
     const [userData] = await Promise.all([fetchQuery(userQuery, { userId })]);
 
     if (userData.error) {
-      //console.error("Airstack API error (user data):", userData.error);
+      console.error("Airstack API error (user data):", userData.error);
       return NextResponse.json(
         { error: userData.error.message },
         { status: 500 }
       );
     }
-    /*
+    
     console.log(
       "Airstack API response (user data):",
       JSON.stringify(userData.data, null, 2)
     );
-    */
+    
     return NextResponse.json({
       userData: userData.data,
     });
